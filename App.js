@@ -17,7 +17,7 @@ const App = () => {
         <View style={styles.line}>
         </View>
         <View style={styles.bottom}>
-        <Text>Already have an account?</Text>
+        <Text>Already have an account?!</Text>
         <TouchableOpacity>
         <Text style={styles.buttonT}> Sign in!</Text>
         </TouchableOpacity>
