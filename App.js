@@ -1,102 +1,62 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import Login from './screens/Login'
+import Home from './screens/Home'
+import Splash from './screens/Splash'
+import ModalScreen from './screens/ModalScreen'
+import Chat from './screens/Chat'
+import Tabs from './screens/Tabs'
+import LoginScreen from './screens/LoginScreen';
+import Registration from './screens/Registration';
+import Home1 from './screens/Home1';
+import MatchedScreen from './screens/MatchedScreen';
+import Messages from './screens/Messages';
+import Time from './screens/Time';
+import MainTrial from './screens/MainTrial';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import Profile from './screens/Profile';
+import { NavigationContainer } from '@react-navigation/native';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
+
+const Stack = createStackNavigator();
 
 const App = () => {
+
+ 
+
   return (
-    <View style={styles.container}>
-      <Image source={require('./assets/trans.png')} style={styles.logo} />
-      <Image source={require('./assets/picture.png')} style={styles.logo1} />
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>  
-        <Image source={require('./assets/google.png')} style={styles.google} />
-          <Text style={styles.buttonText}>Login with Google</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button1}>
-          <Text style={styles.buttonText1}>Sign in with email address</Text>
-        </TouchableOpacity>
-        <View style={styles.line}>
-        </View>
-        <View style={styles.bottom}>
-        <Text>Already have an account?!</Text>
-        <TouchableOpacity>
-        <Text style={styles.buttonT}> Sign in!</Text>
-        </TouchableOpacity>
-        </View>
-      </View>
-    </View>
+    <NavigationContainer>
+      
+      <Stack.Navigator initialRouteName="Login">
+      <Stack.Group>
+      <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen
+          name="Splash"
+          component={Splash}
+          options={{ headerShown: false, gestureEnabled: false }}
+        />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Time" component={Time} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Messages" component={Messages} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false}}/>
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Registration" component={Registration} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Home1" component={Home1} options={{ headerShown: false, gestureEnabled: false }}/>
+        <Stack.Screen name="Match" component={MatchedScreen} options={{ headerShown: false, gestureEnabled: false}}/>
+        <Stack.Screen name="MainTrial" component={MainTrial} options={{ headerShown: false, gestureEnabled: false}}/>
+      
+        
+      
+      </Stack.Group>
+      <Stack.Group screenOptions={{presentation:"modal"}}>
+        <Stack.Screen name="Modal" component={ModalScreen} options={{ headerShown: false }}/>
+      </Stack.Group>
+      </Stack.Navigator> 
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    paddingTop: 50,
-  },
-  logo: {
-    width: 330,
-    height: 200,
-    resizeMode: 'contain',
-  },
-  logo1: {
-    width: 500,
-    height: 270,
-    resizeMode: 'contain',
-  },
-  google: {
-    resizeMode: 'contain',
-    marginLeft:13,
-  },
-  line: {
-    borderBottomColor: 'black',
-    borderBottomWidth: 4,
-    width: '100%',
-    marginVertical: 10,
-  },
-  buttonContainer: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 50,
-  },
-  bottom:{
-    flexDirection:'row',
-  },
-  button: {
-    backgroundColor: '#9E2D0B',
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10,
-    margin: 10,
-    borderRadius: 15,
-    width:292,
-    height:54,
-  },
-  button1: {
-    borderWidth: 1,
-    borderColor: '#000',
-    borderRadius: 15,
-    padding: 10,
-    margin: 10,
-    width:292,
-    height:54,
-    alignItems:'center',
-    justifyContent:'center'
-  },
-  
-  buttonText1: {
-    color: '#000',
-    fontSize: 16,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    marginLeft:35,
-  },
-  buttonT:{
-    color:"#9E2D0B"
-  }
-});
-
 export default App;
+

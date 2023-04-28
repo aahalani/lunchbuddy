@@ -1,0 +1,77 @@
+Home:
+/*const [loggedInUser,setLoggedInUser]=useState({});*/
+/*const loggedInUser = await (
+        await getDoc(doc(db,"users",user.uid))).data();
+    console.log(loggedInUser)*/
+
+    /*db.collection("users").doc(user.uid).get().then((snapshot) => {
+      console.log(snapshot.data())
+      setLoggedInUser(
+        snapshot.docs
+        .map(doc => ({
+          id:doc.id,
+          ...doc.data()
+        }))
+      )
+    }).catch((e) => console.log(e))*/
+    // check if the user swiped on you
+
+{/* Header */}
+{/*       <View className="flex-row items-centre justify-between px-5">
+        <TouchableOpacity style={styles.profileButton}>
+          <Image style={styles.profile} source={require('../assets/profile.jpeg')}/>
+        </TouchableOpacity>
+     
+        {/*<Text style={styles.hello}>Hello, Avval!</Text>
+ 
+      <TouchableOpacity style={styles.chatIcon} onPress={()=>navigation.navigate("Chat")}>
+         <Ionicons name="chatbubbles-sharp" size={45} color="#9E2D0B"/>
+      </TouchableOpacity>
+      </View> */}
+      {/* End of Header */}
+ {/* <Text style={`display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; justify-content: space-between;`}>
+          {card.available.map(([day, time], i) => (
+            <Text key={i} style={`padding: 10px;`}>{`${day}: ${time} \n`}</Text>
+          ))}
+        </Text> */}
+      {/* End of Cards */}
+      {/*<View className="flex flex-row justify-evenly ">
+         <TouchableOpacity 
+        onPress={()=>swipeRef.current.swipeLeft()}
+        className="items-center justify-center rounded-full w-16 h-16 bg-red-200">
+          <Entypo name='cross' size={24} color="red"/>
+        </TouchableOpacity> 
+        <TouchableOpacity 
+        onPress={()=>navigation.navigate("Modal")}
+        className="items-center justify-center rounded-full w-16 h-16 bg-green-200">
+           <AntDesign name='heart' size={24} color="green"/>
+        </TouchableOpacity>
+      </View>
+      */}
+
+<View style={styles.container}>
+          <View style={styles.column}>
+            {chunks.map((chunk, index) => (
+              <View key={index}>
+                {chunk.map((item) => (
+                  <View key={item.day}>
+                    <Text>{item.day}</Text>
+                  </View>
+                ))}
+              </View>
+            ))}
+          </View>
+          <View style={styles.separator} />
+          <View style={styles.column}>
+            {chunks.map((chunk, index) => (
+              <View key={index}>
+                {chunk.map((item) => (
+                  <View key={item.day}>
+                    <Text>{item.times}</Text>
+                  </View>
+                ))}
+              </View>
+            ))}
+          </View>
+        </View>  
+        </View>
