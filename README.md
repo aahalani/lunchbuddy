@@ -40,11 +40,22 @@ If you have any questions or comments, please feel free to contact the developer
 <ol>
  <h3> <li>Splash Screen </li></h3> 
  <img src="https://user-images.githubusercontent.com/29179250/235339316-91fffb60-ad6b-4217-bf17-aae15e532c21.png?raw=true" width="280"/>
-  <h3> <li>Register Screen </li></h3> 
+ <h3> <li>Register Screen </li></h3> 
  <img src="https://user-images.githubusercontent.com/29179250/235414458-12c9dbc6-46fa-4d13-94af-79ee16a043b3.png?raw=true" width="280"/>
  <h3> <li>Login Screen </li></h3> 
  <img src="https://user-images.githubusercontent.com/29179250/235341625-04201b55-b026-488d-8005-6cc1cd8b9a99.png?raw=true" width="280"/>
  <h3> <li>Home Screen (With Profiles)</li></h3> 
  <img src="https://user-images.githubusercontent.com/29179250/235415063-964310dd-bb80-45ca-a336-d6361c06b6bc.png?raw=true" width="280"/>
+ <h3> <li>Home Screen (Without Profiles)</li></h3> 
+ <img src="https://user-images.githubusercontent.com/29179250/235415196-ecde9ad8-4013-4256-b1c0-889a4fa68167.png?raw=true" width="280"/>
+ <h3> <li>Profile Screen</li></h3> 
+ <img src="https://user-images.githubusercontent.com/29179250/235415395-bc1aa34d-e031-4bd3-ba5d-075105febf4f.png?raw=true" width="280"/>
+ <h3> <li>Time Setting Screen</li></h3> 
+ <img src="https://user-images.githubusercontent.com/29179250/235415495-58555ab5-a159-4d87-a973-927dd63206b4.png?raw=true" width="280"/>
+ <h3> <li>Chat Screen</li></h3> 
+ <img src="https://user-images.githubusercontent.com/29179250/235415601-27a3106c-b157-42bd-9778-02da8c8d67b6.png?raw=true" width="280"/>
+ <h3> <li>Messaging Screen</li></h3> 
+ <img src="https://user-images.githubusercontent.com/29179250/235415659-d34c5392-16bf-432d-a7c0-eb4543d72255.png?raw=true" width="280"/>
+
 </ol>
 
